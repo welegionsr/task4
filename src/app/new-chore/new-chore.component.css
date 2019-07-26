@@ -1,8 +1,10 @@
 .form {
-    margin: 0 auto;
+    margin: 12px auto;
     max-width: 400px;
     padding: 12px;
-    border: 1px solid #000;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 1px rgba(128, 128, 128, 0.4);
+    text-align: center;
   }
   
   .title {
@@ -15,6 +17,6 @@
   
   .field label {
     display: inline-block;
-    width: 110px;
+    width: 130px;
   }
   

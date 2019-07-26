@@ -17,4 +17,8 @@ export class ChoreService {
   addChoreToDb(chore: Chore): Observable<Chore> {
     return this.httpClient.post<Chore>(`${API_URL}/chores`, chore);
   }
+
+  deleteChoreFromDb(chore: Chore): Observable<Chore> {
+    return this.httpClient.delete<Chore>(`${API_URL}/chores/${chore._id}`);
+  }
 }

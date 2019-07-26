@@ -70,4 +70,12 @@ export class StoreService {
       });
     });
   }
+
+  deleteChore(chore: Chore) {
+    return this.choreService.deleteChoreFromDb(chore).subscribe(choreFromDb => {
+      this.setState({
+        chores: this.chores.filter((chore) => chore._id !== choreFromDb._id)
+      });
+    });
+  }
 }
