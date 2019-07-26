@@ -61,6 +61,9 @@ export class StoreService {
   }
 
   addChore(chore: Chore) {
+    chore.date = new Date(Date.now());
+    console.log("this is sent to the DB:");
+    console.log(chore);
     return this.choreService.addChoreToDb(chore).subscribe(choreFromDb => {
       this.setState({
         chores: this.chores.concat(choreFromDb)

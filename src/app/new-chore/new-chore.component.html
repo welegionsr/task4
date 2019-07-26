@@ -1,0 +1,22 @@
+<form class="form" (ngSubmit)="submitChore()" [formGroup]="choreForm">
+    <h3 class="title">Add a chore</h3>
+    <h5>Let someone do some work!</h5>
+    <div class="field">
+      <label>
+        description:
+      </label>
+      <input type="text" formControlName="description">
+    </div>
+    <div class="field">
+      <label>
+        Who's gonna do it?
+      </label>
+      <select formControlName="siblingId">
+        <option value="">Pick someone...</option>
+        <option *ngFor="let sibling of store.siblings" [value]="sibling._id">{{sibling.name}}</option>
+      </select>
+    </div>
+
+    <button mat-button type="submit" [disabled]="!choreForm.valid">ADD</button>
+  </form>
+  

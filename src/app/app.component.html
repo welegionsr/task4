@@ -1,11 +1,7 @@
 <mat-toolbar color="primary">
-  <span>Chore Master - Adams residence</span>
-
-  <!-- This fills the remaining space of the current row -->
+  <a class="nav-brand" routerLink="chores">Chore Master - Adams residence</a>
   <span style="flex: 1 1 auto;"></span>
-
-  <button mat-button>Add chore</button>
-
+  <button mat-button><a class="link" routerLink="chores/add">ADD CHORE</a></button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

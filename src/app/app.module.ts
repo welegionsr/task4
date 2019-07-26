@@ -9,6 +9,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule, MatButtonModule} from '@angular/material';
 import { ChoreComponent } from './chore/chore.component';
 import { ChoresListComponent } from './chores-list/chores-list.component';
+import { NewChoreComponent } from './new-chore/new-chore.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 export const API_URL = "http://localhost:3000";
 
@@ -16,9 +19,12 @@ export const API_URL = "http://localhost:3000";
   declarations: [
     AppComponent,
     ChoreComponent,
-    ChoresListComponent
+    ChoresListComponent,
+    NewChoreComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
